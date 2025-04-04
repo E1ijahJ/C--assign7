@@ -25,3 +25,10 @@ TEST(TypeInterpretTest, UInt32ToFloatCorrectness) {
 
     EXPECT_FLOAT_EQ(result, 1.0f);
 }
+
+TEST(TypeInterpretTest, FloatToUInt32Correctness) {
+    float input = 1.0f;
+    uint32_t result = floatToUint32(input);
+
+    EXPECT_EQ(result, 0x3F800000); // IEEE-754 for float 1.0
+}
