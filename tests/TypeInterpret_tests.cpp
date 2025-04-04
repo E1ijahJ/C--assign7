@@ -32,3 +32,10 @@ TEST(TypeInterpretTest, FloatToUInt32Correctness) {
 
     EXPECT_EQ(result, 0x3F800000); // IEEE-754 for float 1.0
 }
+
+TEST(TypeInterpretTest, Int64ToDoubleCorrectness) {
+    int64_t input = 0x3FF0000000000000; // IEEE-754 bits for double 1.0
+    double result = int64ToDouble(input);
+
+    EXPECT_DOUBLE_EQ(result, 1.0);
+}
