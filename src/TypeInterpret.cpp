@@ -22,3 +22,9 @@ uint32_t floatToUint32(float input) {
     std::memcpy(&result, &input, sizeof(float));
     return result;
 }
+
+double int64ToDouble(int64_t input) {
+    double result;
+    std::memcpy(&result, &input, sizeof(double));
+    return result;
+}
