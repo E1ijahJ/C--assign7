@@ -17,3 +17,8 @@ float uint32ToFloat(uint32_t input) {
     std::memcpy(&result, &input, sizeof(float));
     return result;
 }
+uint32_t floatToUint32(float input) {
+    uint32_t result;
+    std::memcpy(&result, &input, sizeof(float));
+    return result;
+}
