@@ -28,3 +28,9 @@ double int64ToDouble(int64_t input) {
     std::memcpy(&result, &input, sizeof(double));
     return result;
 }
+
+int64_t doubleToInt64(double input) {
+    int64_t result;
+    std::memcpy(&result, &input, sizeof(double));
+    return result;
+}
