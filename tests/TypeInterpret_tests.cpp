@@ -39,3 +39,9 @@ TEST(TypeInterpretTest, Int64ToDoubleCorrectness) {
 
     EXPECT_DOUBLE_EQ(result, 1.0);
 }
+
+TEST(TypeInterpretTest, DoubleToInt64Correctness) {
+    double input = 1.0;
+    int64_t result = doubleToInt64(input);
+
+    EXPECT_EQ(result, 0x3FF0000000000000); }
