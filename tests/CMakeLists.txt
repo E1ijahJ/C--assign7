@@ -1,0 +1,3 @@
+add_executable(TypeInterpret_tests TypeInterpret_tests.cpp)
+target_link_libraries(TypeInterpret_tests gtest gtest_main TypeInterpret)
+gtest_discover_tests(TypeInterpret_tests)
